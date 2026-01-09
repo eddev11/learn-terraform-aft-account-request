@@ -1,13 +1,13 @@
-module "sandbox" {
+module "replication" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "edumarjs+aft-test@amazon.com"
-    AccountName               = "aft-test"
+    AccountEmail              = "edumarjs+aft-repl@amazon.com"
+    AccountName               = "aft-replication"
     ManagedOrganizationalUnit = "Workloads"
-    SSOUserEmail              = "edumarjs+aft-test@amazon.com"
+    SSOUserEmail              = "edumarjs+aft-repl@amazon.com"
     SSOUserFirstName          = "AFT"
-    SSOUserLastName           = "Test"
+    SSOUserLastName           = "Replication"
   }
 
   account_tags = {
@@ -20,7 +20,7 @@ module "sandbox" {
   }
 
   custom_fields = {
-    group = "non-prod-test"
+    group = "non-prod-repl"
   }
 
   account_customizations_name = "sandbox"
